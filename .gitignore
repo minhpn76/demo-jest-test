@@ -1,0 +1,33 @@
+node_modules/
+dist/
+coverage/
+.DS_Store
+.idea
+node/
+target/
+.vscode/
+*.iml
+yarn.lock
+package-lock.json
+# TODO: temp solution until spawning of mock-server stops creating this file
+db.json
+
+.classpath
+.project
+*.prefs
+src/main/resources/static/
+build/
+
+# Don't check auto-generated stuff into git
+coverage
+build
+node_modules
+stats.json
+
+# Cruft
+.DS_Store
+npm-debug.log
+.idea
+.awcache
+yarn.lock
+yarn-error.log
