@@ -7,8 +7,8 @@ function CommentBox() {
     setComment(e.target.value)
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  const handleSubmit = () => {
+    // e.preventDefault()
     // call
     // reset
     setComment("")
