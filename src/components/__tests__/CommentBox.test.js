@@ -1,18 +1,22 @@
-// import 'jsdom-global/register';
 import React from 'react'
 import CommentBox from '../CommentBox'
-import { mount, shallow } from 'enzyme'
+import { mount } from 'enzyme'
+import Root from '../../Root'
 
 let wrapped
 
 beforeEach(() => {
-	// const wrapped = mount(<CommentBox />);
-	wrapped = shallow(<CommentBox />);
+	// wrapped = mount(<CommentBox />);
+	wrapped = mount(
+		<Root>
+			<CommentBox />
+		</Root>
+	);
 })
 
-afterEach(() => {
-	// wrapped.ummount()
-})
+// afterEach(() => {
+// 	wrapped.ummount()
+// })
 
 it('has a text area and a button', () => {
 	expect(wrapped.find('textarea').length).toEqual(1);
