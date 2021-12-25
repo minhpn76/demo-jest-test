@@ -1,5 +1,5 @@
 import {
-	SAVE_COMMENT
+	SAVE_COMMENT, FETCH_COMMENT
 } from 'actions/types';
 
 export default function (state = [], action) {
@@ -8,6 +8,12 @@ export default function (state = [], action) {
 			return [
 				...state,
 				action.payload
+			]
+		case FETCH_COMMENT:
+			const comments = action.payload.data.map(com => com.name)
+			return [
+				...state,
+				...comments
 			]
 		default:
 			return state;
