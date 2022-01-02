@@ -24,6 +24,7 @@ function CommentBox() {
 
   return (
     <>
+      <h4>Comment Box</h4>
       <form onSubmit={handleSubmit}>
         <h4>Add a comment</h4>
         <textarea value={comment} onChange={handleChange} />

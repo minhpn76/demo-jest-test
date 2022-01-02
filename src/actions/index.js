@@ -1,6 +1,6 @@
 import axios from 'axios'
 import {
-	SAVE_COMMENT, FETCH_COMMENT
+	SAVE_COMMENT, FETCH_COMMENT, CHANGE_AUTH
 } from './types'
 
 export function saveComment (comment) {
@@ -15,5 +15,12 @@ export async function fetchComment () {
 	return {
 		type: FETCH_COMMENT,
 		payload: resps
+	}
+}
+
+export function changeAuth (isLoggedIn) {
+	return {
+		type: CHANGE_AUTH,
+		payload: isLoggedIn
 	}
 }
