@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import { useDispatch } from "react-redux";
+import withAuth from 'HOC/withAuth'
 import { fetchComment, saveComment } from '../actions'
 
 function CommentBox() {
@@ -37,4 +38,4 @@ function CommentBox() {
   )
 }
 
-export default CommentBox;
+export default memo(withAuth(CommentBox));
