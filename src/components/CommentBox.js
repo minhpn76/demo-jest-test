@@ -1,11 +1,24 @@
-import React, { memo, useState } from "react";
+import React, { memo, useState, useEffect  } from "react";
 import { useDispatch } from "react-redux";
-import withAuth from 'HOC/withAuth'
+import { useSelector } from "react-redux";
+import { useLocation, useNavigate } from 'react-router-dom';
 import { fetchComment, saveComment } from '../actions'
 
 function CommentBox() {
   const dispatch = useDispatch()
   const [comment, setComment] = useState("")
+
+  //TODO: check condition without login
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const auth = useSelector(state => state.auth)
+
+  useEffect(() => {
+    if (!auth) {
+      navigate('/')
+    }
+  }, [location.pathname])
 
   const handleChange = (e) => {
     setComment(e.target.value)
@@ -38,4 +51,4 @@ function CommentBox() {
   )
 }
 
-export default memo(withAuth(CommentBox));
+export default memo(CommentBox);

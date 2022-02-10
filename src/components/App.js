@@ -2,6 +2,7 @@ import React from "react";
 import "../styles.css";
 import CommentList from "./CommentList";
 import CommentBox from "./CommentBox";
+import UserList from "./UserList";
 import {
   BrowserRouter as Router,
   Routes,
@@ -38,6 +39,9 @@ export default function App() {
           <Link to="/post">Post a comment</Link>
         </li>
         <li>
+          <Link to="/users">Users</Link>
+        </li>
+        <li>
           {renderButton()}
         </li>
       </ul>
@@ -49,6 +53,7 @@ export default function App() {
       <Routes>
         <Route path="/post" element={<CommentBox />} />
         <Route path="/" element={<CommentList />} />
+        <Route path="/users" element={<UserList />} />
       </Routes>
     </>
   );
