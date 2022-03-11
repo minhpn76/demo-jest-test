@@ -1,7 +1,7 @@
-import React from "react";
-import "../styles.css";
-import CommentList from "./CommentList";
-import CommentBox from "./CommentBox";
+import React from 'react'
+import '../styles.css'
+import CommentList from './CommentList'
+import CommentBox from './CommentBox'
 
 export default function App() {
   return (
@@ -9,5 +9,5 @@ export default function App() {
       <CommentBox />
       <CommentList />
     </div>
-  );
+  )
 }

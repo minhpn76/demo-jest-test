@@ -2,11 +2,11 @@
 /** @type {import('@jest/types').Config.InitialOptions} */
 const config = {
   verbose: true,
-  setupFilesAfterEnv: ["./src/setupTests.js"],
+  setupFilesAfterEnv: ['./src/setupTests.js'],
   moduleDirectories: ['node_modules', 'src'],
-  testEnvironment: 'jsdom',
-};
+  testEnvironment: 'jsdom'
+}
 // Or async function
 module.exports = async () => {
-  return config;
-};
+  return config
+}

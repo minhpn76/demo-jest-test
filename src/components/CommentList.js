@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import { useSelector } from 'react-redux'
 
 function CommentList() {
@@ -7,26 +7,13 @@ function CommentList() {
   const renderComments = () => {
     return (
       <>
-        {
-          comments.map((com, idx) => (
-            <li key={idx}>{com}</li>
-          ))
-        }
+        {comments.map((com, idx) => (
+          <li key={idx}>{com}</li>
+        ))}
       </>
     )
   }
-  return (
-    <>
-      {
-        comments.length > 0 ? (
-          <ul>
-            {renderComments()}
-          </ul>
-        ) : (<></>)
-      }
-    </>
-
-  )
+  return <>{comments.length > 0 ? <ul>{renderComments()}</ul> : <></>}</>
 }
 
-export default CommentList;
+export default CommentList
