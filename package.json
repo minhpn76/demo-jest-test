@@ -6,10 +6,12 @@
   "main": "src/index.js",
   "dependencies": {
     "axios": "^0.24.0",
+    "better-docs": "^2.7.2",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.5",
     "enzyme-to-json": "3.6.1",
     "jest": "27.3.1",
+    "jsdoc": "^3.6.10",
     "jsdom": "^18.1.1",
     "moxios": "^0.4.0",
     "react": "16.13.1",
@@ -36,7 +38,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write \"**/*.+(js)\" --config ./.prettierrc"
+    "format": "prettier --write \"**/*.+(js)\" --config ./.prettierrc",
+    "docs": "jsdoc -c jsdoc.conf.json"
   },
   "browserslist": [
     ">0.2%",

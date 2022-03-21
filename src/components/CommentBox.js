@@ -2,14 +2,30 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { fetchComment, saveComment } from '../actions'
 
+/**
+ * Component could be user typing data
+ *
+ * @component
+ * @example
+ * return (<CommentBox/>)
+ */
+
 function CommentBox() {
   const dispatch = useDispatch()
   const [comment, setComment] = useState('')
 
+  /**
+   * Func for change action in textarea
+   * @param {*} e - The event from textarea
+   */
   const handleChange = e => {
     setComment(e.target.value)
   }
 
+  /**
+   * Func for click button submit
+   * @param {*} e - The event from button submit
+   */
   const handleSubmit = e => {
     e.preventDefault()
     // call
@@ -18,6 +34,9 @@ function CommentBox() {
     setComment('')
   }
 
+  /**
+   * Func for fetch comment from API
+   */
   const handleFetchComment = () => {
     dispatch(fetchComment())
   }
