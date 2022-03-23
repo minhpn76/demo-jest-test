@@ -16,7 +16,9 @@
     "moxios": "^0.4.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-query": "^3.34.16",
     "react-redux": "7.2.6",
+    "react-router-dom": "6",
     "react-scripts": "4.0.0",
     "redux": "4.1.2",
     "redux-promise": "^0.6.0"

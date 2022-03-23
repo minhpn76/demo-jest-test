@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { fetchComment, saveComment } from '../actions'
+import { saveComment } from '../actions'
+import { fetchComment } from '../api/api'
 
 /**
  * Component could be user typing data
